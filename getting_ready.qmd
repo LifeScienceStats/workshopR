@@ -1,0 +1,100 @@
+---
+title: "Introduction to R"
+subtitle: "Getting ready for the workshop"
+author: Lidiya Mishieva
+date: today
+date-format: "DD MMMM, YYYY"
+format: pdf
+include-in-header:
+  - text: |
+      \pagenumbering{gobble}
+editor: visual
+---
+
+\newpage
+
+\pagenumbering{arabic}
+
+\tableofcontents
+
+\newpage
+
+## Install R and R-Studio
+
+Install R and the current version of RStudio. Follow the instructions on the Posit [website](https://posit.co/download/rstudio-desktop/).
+
+## Create a directory for your first Rproject
+
+Create a directory on your computer that you will use throughout the workshop.
+
+Then, open RStudio. In the left top corner you can find the tab File. Go to *File -\> New project -\> Existing Directory* and select the directory you've just created.
+
+![](images/clipboard-2910705649.png){width="438"}
+
+![](images/clipboard-2824893996.png){width="440"}
+
+This will be your working directory, meaning that all file paths that you will be calling from within RStudio when working within this project, will be relative to this directory. RStudio should open the project automatically after creation. If not, go to the directory and click on the **.Rproj** file, that should have been created by now. In the right bottom corner, you will see all files that are stored within your working directory:
+
+![](images/clipboard-1848783112.png){width="443"}
+
+On the top right corner of RStudio interface, you should also see that the current project is selected:
+
+![](images/clipboard-659338273.png){width="168"}
+
+**Note:** You can use RStudio without creating a project. However, using R projects helps ensure a consistent working environment and supports easier sharing and collaboration.
+
+## Install some additional packages
+
+R is distributed with a core set of packages that are installed by default. In addition, we will use several extra packages during the workshop to provide additional functionality. To save time, you can install them in advance.
+
+At the bottom of the RStudio interface, you will find the **R Console** (you can change the layout of the windows in RStudio if you want by going to *Tools -\> Global Options -\> Pane Layout*). The R Console is the area where you can type R commands and execute them by pressing **Enter**. Any output or messages will be displayed directly below the command:
+
+![](images/clipboard-4251213637.png){width="522"}
+
+Copy following code onto the commando line and press Enter:
+
+```{r}
+#| eval: false
+
+install.packages("tidyverse")
+install.packages("readxl")
+install.packages("gtsummary")
+install.packages("rmarkdown")
+install.packages("knitr")
+install.packages("tinytex")
+tinytex::install_tinytex()
+install.packages("officedown")
+
+```
+
+The packages are only needed to be installed once. You can then the functions included in these packages by loading them into the environment each time you start a new R session.
+
+Below, you can find a brief description of their core functionality, but we will discuss it in more detail during the workshop.
+
+-   **tidyverse:** *A collection of packages for 'tidy' data manipulation, visualization, and analysis*
+
+-   **readxl:** *Import data from Excel files into R*
+
+-   **gtsummary:** *Create well-formatted tables*
+
+-   **rmarkdown:** *Create dynamic reports that combine R code, results, and text*
+
+-   **knit:** *Executes R code inside documents and integrates results into reports*
+
+-   **tinytex:** *Lightweight [LaTeX](https://www.latex-project.org/) distribution required to render PDF documents from [RMarkdown](https://bookdown.org/yihui/rmarkdown/) / [Quarto](https://quarto.org/)*
+
+-   **officedown:** *Create Word and PowerPoint documents with custom formatting*
+
+There are much more packages published on [CRAN](https://cran.r-project.org/web/packages/available_packages_by_name.html), [Github, and other sources](https://github.com/r-lib/remotes). The function *install.packages()* only allows installing packages from CRAN.
+
+## Resources
+
+Here you can find some resources that I found helpful while learning how to use R:
+
+-   [R for Data Science](https://r4ds.hadley.nz/) by Hadley Wickham, Mine Çetinkaya-Rundel and Garrett Grolemund
+
+-   [Statistical Computing with R](https://a-roshani.ir/files/SC/%5B4%5D%20%5BMaria%20L.%20Rizzo%5D%5B2019%5D%20Statistical%20Computing%20%20with%20R,%20Second%20Edition.pdf) by Maria L. Rizzo
+
+-   [R Markdown: The Definitive Guide](https://bookdown.org/yihui/rmarkdown/) by Yihui Xie
+
+There are much much more out there, but you will discover it in time.
