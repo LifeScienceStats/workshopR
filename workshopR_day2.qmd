@@ -70,57 +70,41 @@ format:
 ## Tidy paradigm - intuitive 'readable' syntax
 
 ::: incremental
--   `%>%` is the pipe operator (part of `magrittr` package)
+-   `%>%` is the pipe operator (part of `magrittr` package), passing the results of the previous operation to the next:
 
--   passing the results of the previous operation to the next:
+    -   
 
--   
+        ```{r}
+        #| eval: false
+        #| echo: true
+        foo_foo %>%
+          hop(through = forest) %>%
+          scoop(up = field_mice) %>%
+          bop(on = head)
+        ```
 
-    ```{r}
-    #| eval: false
-    #| echo: true
-    foo_foo %>%
-      hop(through = forest) %>%
-      scoop(up = field_mice) %>%
-      bop(on = head)
-    ```
+    -   The idea is to do this:
 
--   The idea is to do this:
+    -   
 
--   
+        ```{r}
+        #| eval: false
+        #| echo: true
+        use_this %>%
+          do_this_first() %>%
+          do_this_second() %>%
+          do_this_third()
+        ```
 
-    ```{r}
-    #| eval: false
-    #| echo: true
-    use_this %>%
-      do_this_first() %>%
-      do_this_second() %>%
-      do_this_third()
-    ```
+    -   Instead of this:
 
--   Instead of this:
+    -   
 
--   
-
-    ```{r}
-    #| eval: false
-    #| echo: true
-    do_this_third(do_this_second(do_this_first(use_this)))
-    ```
-
--   Or this:
-
--   
-
-    ```{r}
-    #| eval: false
-    #| echo: true
-    do_this_third(
-      do_this_second(
-        do_this_first(use_this)
-        )
-      )
-    ```
+        ```{r}
+        #| eval: false
+        #| echo: true
+        do_this_third(do_this_second(do_this_first(use_this)))
+        ```
 :::
 
 ## Tidy paradigm - intuitive 'readable' syntax
@@ -145,13 +129,13 @@ format:
 
 . . .
 
-![](images/clipboard-2962188991.png)
+![](images/clipboard-2962188991.png){width="400"}
 
 ## Tidy paradigm - pharmaverse
 
 . . .
 
-![](images/clipboard-412081477.png)
+![](images/clipboard-412081477.png){width="267"}
 
 ## Tidy paradigm - tibbles and dataframes
 
@@ -269,47 +253,45 @@ Take home message: tibbles and data.frames both work well in most cases, just be
 ::: incremental
 -   different import functions (and even packages) for different data formats
 
--   importing csv files:
+    -   importing csv files:
 
--   
+        ```{r}
+        #| eval: false
+        #| echo: true
 
-    ```{r}
-    #| eval: false
-    #| echo: true
+        # baseR:
+        read.csv(path)
+        # tidy:
+        readr::read_csv(path)
+        readr::read_csv2(path) # uses a comma as separator
+        ```
 
-    # baseR:
-    read.csv(path)
-    # tidy:
-    readr::read_csv(path)
-    readr::read_csv2(path) # uses a comma as separator
-    ```
+    -   importing excel files:
 
--   importing excel files:
+        ```{r}
+        #| eval: false 
+        #| echo: true  
 
--   
+        readxl::read_excel(path)
+        ```
 
-    ```{r}
-    #| eval: false 
-    #| echo: true  
+    -   importing other common data files :
 
-    readxl::read_excel(path)
-    ```
+        ```{r}
+        #| eval: false 
+        #| echo: true  
 
--   importing other common data files :
+        haven::read_dta(path) 
+        haven::read_sas(path) 
+        haven::read_sav(path) 
+        haven::read_stata(path) 
+        haven::read_spss(path)
+        ```
+:::
 
--   
+## Working with data - import/export
 
-    ```{r}
-    #| eval: false 
-    #| echo: true  
-
-    haven::read_dta(path) 
-    haven::read_sas(path) 
-    haven::read_sav(path) 
-    haven::read_stata(path) 
-    haven::read_spss(path)
-    ```
-
+::: incremental
 -   export functions are usually just called `write_` instead of `read_` (check the documentations), but you have to provide the object to be exported and the path in separate arguments, e.g.:
 
     ```{r}
@@ -369,10 +351,8 @@ Take home message: tibbles and data.frames both work well in most cases, just be
 
 -   **merging (all from `dplyr`)**
 
-    -   `left_join()`,
-    -   `right_join()`,
-    -   `inner_join()`,
-    -   `full_join()`
+    -   `left_join()` & `right_join()`
+    -   `inner_join()` & `full_join()`
 :::
 
 ## Working with data - long to wide & wide to long (base)
@@ -456,21 +436,17 @@ data_long <- data_wide %>%
 
 -   tidy
 
-    -   rows:
+    -   rows: `data %>% filter(age > 30)`
 
-        -   `data %>% filter(age > 30)`
+    -   columns: `select(data, name, age)`
 
-    -   columns:
-
-        -   `select(data, name, age)`
-
-    -   in a pipe:
-
-        -   `data %>%  select(name, age) %>% filter(age > 30)`
+    -   in a pipe: `data %>% select(name, age) %>% filter(age > 30)`
 
     -   helper functions: `starts_with("string")`, `contains("string")`
 
-    -   or use regular expressions (regex): <https://r4ds.hadley.nz/regexps.html>
+    -   or use regular expressions (regex):
+
+        -   <https://r4ds.hadley.nz/regexps.html>
 :::
 
 ## Working with data - renaming variables (base)
@@ -492,9 +468,7 @@ data_long <- data_wide %>%
 ## Working with data - renaming variables (tidy)
 
 ::: incremental
--   `rename()`:
-
-    -   `data %>% rename(new = old)`
+-   `rename()`: `data %>% rename(new = old)`
 
 -   rename multiple variables at once (`rename_with()` expects a function, indicated by `~`):
 
@@ -582,4 +556,4 @@ data_long <- data_wide %>%
 
 ## The end
 
-![](images/clipboard-97370011.png)
+![https://allisonhorst.com/](images/clipboard-97370011.png)

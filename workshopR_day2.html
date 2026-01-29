@@ -251,8 +251,8 @@ Lidiya Mishieva
 <section id="tidy-paradigm---intuitive-readable-syntax-1" class="slide level2">
 <h2>Tidy paradigm - intuitive ‘readable’ syntax</h2>
 <ul>
-<li class="fragment"><p><code>%&gt;%</code> is the pipe operator (part of <code>magrittr</code> package)</p></li>
-<li class="fragment"><p>passing the results of the previous operation to the next:</p></li>
+<li class="fragment"><p><code>%&gt;%</code> is the pipe operator (part of <code>magrittr</code> package), passing the results of the previous operation to the next:</p>
+<ul>
 <li class="fragment"><div class="cell">
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href=""></a>foo_foo <span class="sc">%&gt;%</span></span>
 <span id="cb2-2"><a href=""></a>  <span class="fu">hop</span>(<span class="at">through =</span> forest) <span class="sc">%&gt;%</span></span>
@@ -270,14 +270,7 @@ Lidiya Mishieva
 <li class="fragment"><div class="cell">
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href=""></a><span class="fu">do_this_third</span>(<span class="fu">do_this_second</span>(<span class="fu">do_this_first</span>(use_this)))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div></li>
-<li class="fragment"><p>Or this:</p></li>
-<li class="fragment"><div class="cell">
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href=""></a><span class="fu">do_this_third</span>(</span>
-<span id="cb5-2"><a href=""></a>  <span class="fu">do_this_second</span>(</span>
-<span id="cb5-3"><a href=""></a>    <span class="fu">do_this_first</span>(use_this)</span>
-<span id="cb5-4"><a href=""></a>    )</span>
-<span id="cb5-5"><a href=""></a>  )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div></li>
+</ul></li>
 </ul>
 </section>
 <section id="tidy-paradigm---intuitive-readable-syntax-2" class="slide level2">
@@ -301,13 +294,13 @@ Lidiya Mishieva
 <section id="tidy-paradigm---tidyverse" class="slide level2">
 <h2>Tidy paradigm - tidyverse</h2>
 <div class="fragment">
-<p><img data-src="images/clipboard-2962188991.png"></p>
+<p><img data-src="images/clipboard-2962188991.png" width="400"></p>
 </div>
 </section>
 <section id="tidy-paradigm---pharmaverse" class="slide level2">
 <h2>Tidy paradigm - pharmaverse</h2>
 <div class="fragment">
-<p><img data-src="images/clipboard-412081477.png"></p>
+<p><img data-src="images/clipboard-412081477.png" width="267"></p>
 </div>
 </section>
 <section id="tidy-paradigm---tibbles-and-dataframes" class="slide level2">
@@ -317,20 +310,20 @@ Lidiya Mishieva
 <li class="fragment"><p>output of tidyverse functions is usually a tibble (if performed on a data.frame)</p></li>
 <li class="fragment"><p>unlike data frames, tibbles don’t show the entire dataset when you print it:</p></li>
 <li class="fragment"><div class="cell">
-<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href=""></a><span class="co"># load data</span></span>
-<span id="cb6-2"><a href=""></a>penguins <span class="ot">&lt;-</span> datasets<span class="sc">::</span>penguins</span>
-<span id="cb6-3"><a href=""></a><span class="co"># object class is data.frame</span></span>
-<span id="cb6-4"><a href=""></a><span class="fu">class</span>(penguins)</span>
-<span id="cb6-5"><a href=""></a><span class="co"># print the data</span></span>
-<span id="cb6-6"><a href=""></a>penguins</span>
-<span id="cb6-7"><a href=""></a><span class="co"># convert to tibble</span></span>
-<span id="cb6-8"><a href=""></a>penguins <span class="ot">&lt;-</span> tibble<span class="sc">::</span><span class="fu">as_tibble</span>(penguins)</span>
-<span id="cb6-9"><a href=""></a><span class="co"># object class is tibble now</span></span>
-<span id="cb6-10"><a href=""></a><span class="fu">class</span>(penguins)</span>
-<span id="cb6-11"><a href=""></a><span class="co"># print the data</span></span>
-<span id="cb6-12"><a href=""></a>penguins</span>
-<span id="cb6-13"><a href=""></a><span class="co"># we can also do the same with dataframes by uisnd head()</span></span>
-<span id="cb6-14"><a href=""></a><span class="fu">head</span>(<span class="fu">as.data.frame</span>(penguins))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href=""></a><span class="co"># load data</span></span>
+<span id="cb5-2"><a href=""></a>penguins <span class="ot">&lt;-</span> datasets<span class="sc">::</span>penguins</span>
+<span id="cb5-3"><a href=""></a><span class="co"># object class is data.frame</span></span>
+<span id="cb5-4"><a href=""></a><span class="fu">class</span>(penguins)</span>
+<span id="cb5-5"><a href=""></a><span class="co"># print the data</span></span>
+<span id="cb5-6"><a href=""></a>penguins</span>
+<span id="cb5-7"><a href=""></a><span class="co"># convert to tibble</span></span>
+<span id="cb5-8"><a href=""></a>penguins <span class="ot">&lt;-</span> tibble<span class="sc">::</span><span class="fu">as_tibble</span>(penguins)</span>
+<span id="cb5-9"><a href=""></a><span class="co"># object class is tibble now</span></span>
+<span id="cb5-10"><a href=""></a><span class="fu">class</span>(penguins)</span>
+<span id="cb5-11"><a href=""></a><span class="co"># print the data</span></span>
+<span id="cb5-12"><a href=""></a>penguins</span>
+<span id="cb5-13"><a href=""></a><span class="co"># we can also do the same with dataframes by uisnd head()</span></span>
+<span id="cb5-14"><a href=""></a><span class="fu">head</span>(<span class="fu">as.data.frame</span>(penguins))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div></li>
 </ul>
 </section>
@@ -339,14 +332,14 @@ Lidiya Mishieva
 <ul>
 <li class="fragment"><p>tibbles cannot access a column when you provide a partial name of the column, but data frames can</p></li>
 <li class="fragment"><div class="cell">
-<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href=""></a>penguins_df <span class="ot">&lt;-</span> <span class="fu">as.data.frame</span>(penguins)</span>
-<span id="cb7-2"><a href=""></a>penguins_tibble <span class="ot">&lt;-</span> tibble<span class="sc">::</span><span class="fu">as_tibble</span>(penguins)</span>
-<span id="cb7-3"><a href=""></a></span>
-<span id="cb7-4"><a href=""></a><span class="co"># works on dataframes</span></span>
-<span id="cb7-5"><a href=""></a>penguins_df<span class="sc">$</span>sp</span>
-<span id="cb7-6"><a href=""></a><span class="co"># does not work on tibbles</span></span>
-<span id="cb7-7"><a href=""></a>penguins_tibble<span class="sc">$</span>sp</span>
-<span id="cb7-8"><a href=""></a>penguins_tibble<span class="sc">$</span>species</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href=""></a>penguins_df <span class="ot">&lt;-</span> <span class="fu">as.data.frame</span>(penguins)</span>
+<span id="cb6-2"><a href=""></a>penguins_tibble <span class="ot">&lt;-</span> tibble<span class="sc">::</span><span class="fu">as_tibble</span>(penguins)</span>
+<span id="cb6-3"><a href=""></a></span>
+<span id="cb6-4"><a href=""></a><span class="co"># works on dataframes</span></span>
+<span id="cb6-5"><a href=""></a>penguins_df<span class="sc">$</span>sp</span>
+<span id="cb6-6"><a href=""></a><span class="co"># does not work on tibbles</span></span>
+<span id="cb6-7"><a href=""></a>penguins_tibble<span class="sc">$</span>sp</span>
+<span id="cb6-8"><a href=""></a>penguins_tibble<span class="sc">$</span>species</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div></li>
 </ul>
 </section>
@@ -355,11 +348,11 @@ Lidiya Mishieva
 <ul>
 <li class="fragment"><p>when you access only one column of a tibble, it will keep the tibble structure. But when you access one column of a data frame, it will become a vector</p></li>
 <li class="fragment"><div class="cell">
-<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href=""></a>penguins_tibble[,<span class="st">"species"</span>]</span>
-<span id="cb8-2"><a href=""></a><span class="fu">class</span>(penguins_tibble[,<span class="st">"species"</span>]) <span class="co"># will stay a tibble</span></span>
-<span id="cb8-3"><a href=""></a></span>
-<span id="cb8-4"><a href=""></a>penguins_df[,<span class="st">"species"</span>]</span>
-<span id="cb8-5"><a href=""></a><span class="fu">class</span>(penguins_df[,<span class="st">"species"</span>]) <span class="co"># will beocme a vector</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href=""></a>penguins_tibble[,<span class="st">"species"</span>]</span>
+<span id="cb7-2"><a href=""></a><span class="fu">class</span>(penguins_tibble[,<span class="st">"species"</span>]) <span class="co"># will stay a tibble</span></span>
+<span id="cb7-3"><a href=""></a></span>
+<span id="cb7-4"><a href=""></a>penguins_df[,<span class="st">"species"</span>]</span>
+<span id="cb7-5"><a href=""></a><span class="fu">class</span>(penguins_df[,<span class="st">"species"</span>]) <span class="co"># will beocme a vector</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div></li>
 </ul>
 </section>
@@ -369,11 +362,11 @@ Lidiya Mishieva
 <li class="fragment"><p>when assigning a new column to a tibble, the input will not be recycled, which means you have to provide an input of the same length of the other columns</p></li>
 <li class="fragment"><p>but a data frame will recycle the input</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href=""></a><span class="co"># will return an error</span></span>
-<span id="cb9-2"><a href=""></a>penguins_tibble<span class="sc">$</span>new_var <span class="ot">&lt;-</span> <span class="dv">5</span><span class="sc">:</span><span class="dv">6</span></span>
-<span id="cb9-3"><a href=""></a><span class="co"># will recycle the input across the rows</span></span>
-<span id="cb9-4"><a href=""></a>penguins_df<span class="sc">$</span>new_var <span class="ot">&lt;-</span> <span class="dv">5</span><span class="sc">:</span><span class="dv">6</span></span>
-<span id="cb9-5"><a href=""></a>penguins_df<span class="sc">$</span>new_var</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href=""></a><span class="co"># will return an error</span></span>
+<span id="cb8-2"><a href=""></a>penguins_tibble<span class="sc">$</span>new_var <span class="ot">&lt;-</span> <span class="dv">5</span><span class="sc">:</span><span class="dv">6</span></span>
+<span id="cb8-3"><a href=""></a><span class="co"># will recycle the input across the rows</span></span>
+<span id="cb8-4"><a href=""></a>penguins_df<span class="sc">$</span>new_var <span class="ot">&lt;-</span> <span class="dv">5</span><span class="sc">:</span><span class="dv">6</span></span>
+<span id="cb8-5"><a href=""></a>penguins_df<span class="sc">$</span>new_var</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div></li>
 </ul>
 </section>
@@ -382,8 +375,8 @@ Lidiya Mishieva
 <ul>
 <li class="fragment"><p>tibbles don’t support support arithmetic operations on all columns well, the result will be converted into a data frame without any notice</p></li>
 <li class="fragment"><div class="cell">
-<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href=""></a>penguins_tibble<span class="sc">$</span>new_var <span class="ot">&lt;-</span> penguins_tibble<span class="sc">$</span>bill_len<span class="sc">^</span><span class="dv">2</span></span>
-<span id="cb10-2"><a href=""></a><span class="fu">class</span>(penguins_tibble)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href=""></a>penguins_tibble<span class="sc">$</span>new_var <span class="ot">&lt;-</span> penguins_tibble<span class="sc">$</span>bill_len<span class="sc">^</span><span class="dv">2</span></span>
+<span id="cb9-2"><a href=""></a><span class="fu">class</span>(penguins_tibble)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div></li>
 </ul>
 <div class="fragment">
@@ -408,30 +401,37 @@ Lidiya Mishieva
 <section id="working-with-data---importexport" class="slide level2">
 <h2>Working with data - import/export</h2>
 <ul>
-<li class="fragment"><p>different import functions (and even packages) for different data formats</p></li>
-<li class="fragment"><p>importing csv files:</p></li>
-<li class="fragment"><div class="cell">
-<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href=""></a><span class="co"># baseR:</span></span>
-<span id="cb11-2"><a href=""></a><span class="fu">read.csv</span>(path)</span>
-<span id="cb11-3"><a href=""></a><span class="co"># tidy:</span></span>
-<span id="cb11-4"><a href=""></a>readr<span class="sc">::</span><span class="fu">read_csv</span>(path)</span>
-<span id="cb11-5"><a href=""></a>readr<span class="sc">::</span><span class="fu">read_csv2</span>(path) <span class="co"># uses a comma as separator</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<li class="fragment"><p>different import functions (and even packages) for different data formats</p>
+<ul>
+<li class="fragment"><p>importing csv files:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href=""></a><span class="co"># baseR:</span></span>
+<span id="cb10-2"><a href=""></a><span class="fu">read.csv</span>(path)</span>
+<span id="cb10-3"><a href=""></a><span class="co"># tidy:</span></span>
+<span id="cb10-4"><a href=""></a>readr<span class="sc">::</span><span class="fu">read_csv</span>(path)</span>
+<span id="cb10-5"><a href=""></a>readr<span class="sc">::</span><span class="fu">read_csv2</span>(path) <span class="co"># uses a comma as separator</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div></li>
-<li class="fragment"><p>importing excel files:</p></li>
-<li class="fragment"><div class="cell">
-<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href=""></a>readxl<span class="sc">::</span><span class="fu">read_excel</span>(path)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<li class="fragment"><p>importing excel files:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href=""></a>readxl<span class="sc">::</span><span class="fu">read_excel</span>(path)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div></li>
-<li class="fragment"><p>importing other common data files :</p></li>
-<li class="fragment"><div class="cell">
-<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href=""></a>haven<span class="sc">::</span><span class="fu">read_dta</span>(path) </span>
-<span id="cb13-2"><a href=""></a>haven<span class="sc">::</span><span class="fu">read_sas</span>(path) </span>
-<span id="cb13-3"><a href=""></a>haven<span class="sc">::</span><span class="fu">read_sav</span>(path) </span>
-<span id="cb13-4"><a href=""></a>haven<span class="sc">::</span><span class="fu">read_stata</span>(path) </span>
-<span id="cb13-5"><a href=""></a>haven<span class="sc">::</span><span class="fu">read_spss</span>(path)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<li class="fragment"><p>importing other common data files :</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href=""></a>haven<span class="sc">::</span><span class="fu">read_dta</span>(path) </span>
+<span id="cb12-2"><a href=""></a>haven<span class="sc">::</span><span class="fu">read_sas</span>(path) </span>
+<span id="cb12-3"><a href=""></a>haven<span class="sc">::</span><span class="fu">read_sav</span>(path) </span>
+<span id="cb12-4"><a href=""></a>haven<span class="sc">::</span><span class="fu">read_stata</span>(path) </span>
+<span id="cb12-5"><a href=""></a>haven<span class="sc">::</span><span class="fu">read_spss</span>(path)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div></li>
+</ul></li>
+</ul>
+</section>
+<section id="working-with-data---importexport-1" class="slide level2">
+<h2>Working with data - import/export</h2>
+<ul>
 <li class="fragment"><p>export functions are usually just called <code>write_</code> instead of <code>read_</code> (check the documentations), but you have to provide the object to be exported and the path in separate arguments, e.g.:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href=""></a><span class="fu">write_csv</span>(data, <span class="at">file=</span><span class="st">"somepath.csv"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href=""></a><span class="fu">write_csv</span>(data, <span class="at">file=</span><span class="st">"somepath.csv"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div></li>
 <li class="fragment"><p>export to excel is not straightforward, better to export csv and then open using excel if needed</p></li>
 </ul>
@@ -475,10 +475,8 @@ Lidiya Mishieva
 </ul></li>
 <li class="fragment"><p><strong>merging (all from <code>dplyr</code>)</strong></p>
 <ul>
-<li class="fragment"><code>left_join()</code>,</li>
-<li class="fragment"><code>right_join()</code>,</li>
-<li class="fragment"><code>inner_join()</code>,</li>
-<li class="fragment"><code>full_join()</code></li>
+<li class="fragment"><code>left_join()</code> &amp; <code>right_join()</code></li>
+<li class="fragment"><code>inner_join()</code> &amp; <code>full_join()</code></li>
 </ul></li>
 </ul>
 </section>
@@ -486,61 +484,61 @@ Lidiya Mishieva
 <h2>Working with data - long to wide &amp; wide to long (base)</h2>
 <div class="fragment">
 <div class="cell">
-<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href=""></a><span class="co"># load an example dataset from the package datasets (long format)</span></span>
-<span id="cb15-2"><a href=""></a>data_long <span class="ot">&lt;-</span> datasets<span class="sc">::</span>Indometh</span>
-<span id="cb15-3"><a href=""></a></span>
-<span id="cb15-4"><a href=""></a><span class="co"># long to wide</span></span>
-<span id="cb15-5"><a href=""></a>data_wide <span class="ot">&lt;-</span> <span class="fu">reshape</span>(data_long,            <span class="co"># data in the long format</span></span>
-<span id="cb15-6"><a href=""></a>                     <span class="at">idvar =</span> <span class="st">"Subject"</span>,    <span class="co"># names of one or more variables in long format that </span></span>
-<span id="cb15-7"><a href=""></a>                                           <span class="co"># identify multiple records from the same group/individual</span></span>
-<span id="cb15-8"><a href=""></a>                     </span>
-<span id="cb15-9"><a href=""></a>                     <span class="at">timevar =</span> <span class="st">"time"</span>,     <span class="co"># the variable in long format that differentiates multiple </span></span>
-<span id="cb15-10"><a href=""></a>                                           <span class="co"># records from the same group or individual</span></span>
-<span id="cb15-11"><a href=""></a>                     </span>
-<span id="cb15-12"><a href=""></a>                     <span class="at">v.names =</span> <span class="st">"conc"</span>,     <span class="co"># names of variables in the long format that correspond </span></span>
-<span id="cb15-13"><a href=""></a>                                           <span class="co"># to multiple variables in the wide format</span></span>
-<span id="cb15-14"><a href=""></a>                     </span>
-<span id="cb15-15"><a href=""></a>                     <span class="at">direction =</span> <span class="st">"wide"</span>)   <span class="co"># direction of reshaping</span></span>
-<span id="cb15-16"><a href=""></a></span>
-<span id="cb15-17"><a href=""></a><span class="co"># wide to long</span></span>
-<span id="cb15-18"><a href=""></a>data_long <span class="ot">&lt;-</span> <span class="fu">reshape</span>(data_wide,            <span class="co"># data in the wide format</span></span>
-<span id="cb15-19"><a href=""></a>                     <span class="at">idvar =</span> <span class="st">"Subject"</span>,    <span class="co"># names of one or more variables in long format that </span></span>
-<span id="cb15-20"><a href=""></a>                                           <span class="co"># identify multiple records from the same group/individual</span></span>
-<span id="cb15-21"><a href=""></a>                     </span>
-<span id="cb15-22"><a href=""></a>                     <span class="at">v.names =</span> <span class="st">"conc"</span>,     <span class="co"># names of variables in the long format that correspond </span></span>
-<span id="cb15-23"><a href=""></a>                                           <span class="co"># to multiple variables in the wide format</span></span>
-<span id="cb15-24"><a href=""></a>                     </span>
-<span id="cb15-25"><a href=""></a>                     <span class="at">direction =</span> <span class="st">"long"</span>)   <span class="co"># direction of reshaping</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href=""></a><span class="co"># load an example dataset from the package datasets (long format)</span></span>
+<span id="cb14-2"><a href=""></a>data_long <span class="ot">&lt;-</span> datasets<span class="sc">::</span>Indometh</span>
+<span id="cb14-3"><a href=""></a></span>
+<span id="cb14-4"><a href=""></a><span class="co"># long to wide</span></span>
+<span id="cb14-5"><a href=""></a>data_wide <span class="ot">&lt;-</span> <span class="fu">reshape</span>(data_long,            <span class="co"># data in the long format</span></span>
+<span id="cb14-6"><a href=""></a>                     <span class="at">idvar =</span> <span class="st">"Subject"</span>,    <span class="co"># names of one or more variables in long format that </span></span>
+<span id="cb14-7"><a href=""></a>                                           <span class="co"># identify multiple records from the same group/individual</span></span>
+<span id="cb14-8"><a href=""></a>                     </span>
+<span id="cb14-9"><a href=""></a>                     <span class="at">timevar =</span> <span class="st">"time"</span>,     <span class="co"># the variable in long format that differentiates multiple </span></span>
+<span id="cb14-10"><a href=""></a>                                           <span class="co"># records from the same group or individual</span></span>
+<span id="cb14-11"><a href=""></a>                     </span>
+<span id="cb14-12"><a href=""></a>                     <span class="at">v.names =</span> <span class="st">"conc"</span>,     <span class="co"># names of variables in the long format that correspond </span></span>
+<span id="cb14-13"><a href=""></a>                                           <span class="co"># to multiple variables in the wide format</span></span>
+<span id="cb14-14"><a href=""></a>                     </span>
+<span id="cb14-15"><a href=""></a>                     <span class="at">direction =</span> <span class="st">"wide"</span>)   <span class="co"># direction of reshaping</span></span>
+<span id="cb14-16"><a href=""></a></span>
+<span id="cb14-17"><a href=""></a><span class="co"># wide to long</span></span>
+<span id="cb14-18"><a href=""></a>data_long <span class="ot">&lt;-</span> <span class="fu">reshape</span>(data_wide,            <span class="co"># data in the wide format</span></span>
+<span id="cb14-19"><a href=""></a>                     <span class="at">idvar =</span> <span class="st">"Subject"</span>,    <span class="co"># names of one or more variables in long format that </span></span>
+<span id="cb14-20"><a href=""></a>                                           <span class="co"># identify multiple records from the same group/individual</span></span>
+<span id="cb14-21"><a href=""></a>                     </span>
+<span id="cb14-22"><a href=""></a>                     <span class="at">v.names =</span> <span class="st">"conc"</span>,     <span class="co"># names of variables in the long format that correspond </span></span>
+<span id="cb14-23"><a href=""></a>                                           <span class="co"># to multiple variables in the wide format</span></span>
+<span id="cb14-24"><a href=""></a>                     </span>
+<span id="cb14-25"><a href=""></a>                     <span class="at">direction =</span> <span class="st">"long"</span>)   <span class="co"># direction of reshaping</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div>
 </section>
 <section id="working-with-data---long-to-wide-wide-to-long-tidy" class="slide level2">
 <h2>Working with data - long to wide &amp; wide to long (tidy)</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href=""></a><span class="co"># load an example dataset from the package datasets (long format)</span></span>
-<span id="cb16-2"><a href=""></a>data_long <span class="ot">&lt;-</span> datasets<span class="sc">::</span>Indometh</span>
-<span id="cb16-3"><a href=""></a></span>
-<span id="cb16-4"><a href=""></a><span class="co"># long to wide</span></span>
-<span id="cb16-5"><a href=""></a>data_wide <span class="ot">&lt;-</span> data_long <span class="sc">%&gt;%</span></span>
-<span id="cb16-6"><a href=""></a>  <span class="fu">pivot_wider</span>(</span>
-<span id="cb16-7"><a href=""></a>    <span class="at">names_from =</span> time,          <span class="co"># which column (or columns) to get the name of the output</span></span>
-<span id="cb16-8"><a href=""></a>    <span class="at">values_from =</span> conc,         <span class="co"># which column (or columns) to get the cell values from</span></span>
-<span id="cb16-9"><a href=""></a>    <span class="at">names_prefix =</span> <span class="st">"conc."</span>)     <span class="co"># string added to the start of every variable name</span></span>
-<span id="cb16-10"><a href=""></a></span>
-<span id="cb16-11"><a href=""></a><span class="co"># wide to long</span></span>
-<span id="cb16-12"><a href=""></a>data_long <span class="ot">&lt;-</span> data_wide <span class="sc">%&gt;%</span></span>
-<span id="cb16-13"><a href=""></a>  <span class="fu">pivot_longer</span>(</span>
-<span id="cb16-14"><a href=""></a>    <span class="at">cols =</span> <span class="fu">starts_with</span>(<span class="st">"conc"</span>),  <span class="co"># columns to pivot into longer format (selection example, use only one)</span></span>
-<span id="cb16-15"><a href=""></a>    <span class="at">cols =</span> conc.<span class="fl">0.25</span><span class="sc">:</span>conc<span class="fl">.8</span>,     <span class="co"># columns to pivot into longer format (selection example, use only one)</span></span>
-<span id="cb16-16"><a href=""></a>    </span>
-<span id="cb16-17"><a href=""></a>    <span class="at">names_to =</span> <span class="st">"time"</span>,           <span class="co"># a character vector specifying the new column or columns to create </span></span>
-<span id="cb16-18"><a href=""></a>                                 <span class="co"># from the information stored in the column names of data specified by cols</span></span>
-<span id="cb16-19"><a href=""></a>    </span>
-<span id="cb16-20"><a href=""></a>    <span class="at">names_prefix =</span> <span class="st">"conc."</span>,      <span class="co"># a regular expression used to remove matching text from the start of each </span></span>
-<span id="cb16-21"><a href=""></a>                                 <span class="co"># variable name</span></span>
-<span id="cb16-22"><a href=""></a>    </span>
-<span id="cb16-23"><a href=""></a>    <span class="at">values_to =</span> <span class="st">"conc"</span>)          <span class="co"># a string specifying the name of the column to create from the data stored </span></span>
-<span id="cb16-24"><a href=""></a>                                 <span class="co"># in cell values</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href=""></a><span class="co"># load an example dataset from the package datasets (long format)</span></span>
+<span id="cb15-2"><a href=""></a>data_long <span class="ot">&lt;-</span> datasets<span class="sc">::</span>Indometh</span>
+<span id="cb15-3"><a href=""></a></span>
+<span id="cb15-4"><a href=""></a><span class="co"># long to wide</span></span>
+<span id="cb15-5"><a href=""></a>data_wide <span class="ot">&lt;-</span> data_long <span class="sc">%&gt;%</span></span>
+<span id="cb15-6"><a href=""></a>  <span class="fu">pivot_wider</span>(</span>
+<span id="cb15-7"><a href=""></a>    <span class="at">names_from =</span> time,          <span class="co"># which column (or columns) to get the name of the output</span></span>
+<span id="cb15-8"><a href=""></a>    <span class="at">values_from =</span> conc,         <span class="co"># which column (or columns) to get the cell values from</span></span>
+<span id="cb15-9"><a href=""></a>    <span class="at">names_prefix =</span> <span class="st">"conc."</span>)     <span class="co"># string added to the start of every variable name</span></span>
+<span id="cb15-10"><a href=""></a></span>
+<span id="cb15-11"><a href=""></a><span class="co"># wide to long</span></span>
+<span id="cb15-12"><a href=""></a>data_long <span class="ot">&lt;-</span> data_wide <span class="sc">%&gt;%</span></span>
+<span id="cb15-13"><a href=""></a>  <span class="fu">pivot_longer</span>(</span>
+<span id="cb15-14"><a href=""></a>    <span class="at">cols =</span> <span class="fu">starts_with</span>(<span class="st">"conc"</span>),  <span class="co"># columns to pivot into longer format (selection example, use only one)</span></span>
+<span id="cb15-15"><a href=""></a>    <span class="at">cols =</span> conc.<span class="fl">0.25</span><span class="sc">:</span>conc<span class="fl">.8</span>,     <span class="co"># columns to pivot into longer format (selection example, use only one)</span></span>
+<span id="cb15-16"><a href=""></a>    </span>
+<span id="cb15-17"><a href=""></a>    <span class="at">names_to =</span> <span class="st">"time"</span>,           <span class="co"># a character vector specifying the new column or columns to create </span></span>
+<span id="cb15-18"><a href=""></a>                                 <span class="co"># from the information stored in the column names of data specified by cols</span></span>
+<span id="cb15-19"><a href=""></a>    </span>
+<span id="cb15-20"><a href=""></a>    <span class="at">names_prefix =</span> <span class="st">"conc."</span>,      <span class="co"># a regular expression used to remove matching text from the start of each </span></span>
+<span id="cb15-21"><a href=""></a>                                 <span class="co"># variable name</span></span>
+<span id="cb15-22"><a href=""></a>    </span>
+<span id="cb15-23"><a href=""></a>    <span class="at">values_to =</span> <span class="st">"conc"</span>)          <span class="co"># a string specifying the name of the column to create from the data stored </span></span>
+<span id="cb15-24"><a href=""></a>                                 <span class="co"># in cell values</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section id="working-with-data---subsettingfiltering" class="slide level2">
@@ -554,20 +552,14 @@ Lidiya Mishieva
 </ul></li>
 <li class="fragment"><p>tidy</p>
 <ul>
-<li class="fragment"><p>rows:</p>
-<ul>
-<li class="fragment"><code>data %&gt;% filter(age &gt; 30)</code></li>
-</ul></li>
-<li class="fragment"><p>columns:</p>
-<ul>
-<li class="fragment"><code>select(data, name, age)</code></li>
-</ul></li>
-<li class="fragment"><p>in a pipe:</p>
-<ul>
-<li class="fragment"><code>data %&gt;%  select(name, age) %&gt;% filter(age &gt; 30)</code></li>
-</ul></li>
+<li class="fragment"><p>rows: <code>data %&gt;% filter(age &gt; 30)</code></p></li>
+<li class="fragment"><p>columns: <code>select(data, name, age)</code></p></li>
+<li class="fragment"><p>in a pipe: <code>data %&gt;% select(name, age) %&gt;% filter(age &gt; 30)</code></p></li>
 <li class="fragment"><p>helper functions: <code>starts_with("string")</code>, <code>contains("string")</code></p></li>
-<li class="fragment"><p>or use regular expressions (regex): <a href="https://r4ds.hadley.nz/regexps.html" class="uri">https://r4ds.hadley.nz/regexps.html</a></p></li>
+<li class="fragment"><p>or use regular expressions (regex):</p>
+<ul>
+<li class="fragment"><a href="https://r4ds.hadley.nz/regexps.html" class="uri">https://r4ds.hadley.nz/regexps.html</a></li>
+</ul></li>
 </ul></li>
 </ul>
 </section>
@@ -591,10 +583,7 @@ Lidiya Mishieva
 <section id="working-with-data---renaming-variables-tidy" class="slide level2">
 <h2>Working with data - renaming variables (tidy)</h2>
 <ul>
-<li class="fragment"><p><code>rename()</code>:</p>
-<ul>
-<li class="fragment"><code>data %&gt;% rename(new = old)</code></li>
-</ul></li>
+<li class="fragment"><p><code>rename()</code>: <code>data %&gt;% rename(new = old)</code></p></li>
 <li class="fragment"><p>rename multiple variables at once (<code>rename_with()</code> expects a function, indicated by <code>~</code>):</p>
 <ul>
 <li class="fragment"><p><code>data %&gt;% rename_with(~ paste0("var", seq_along(.x)))</code></p>
@@ -688,7 +677,7 @@ Lidiya Mishieva
 <h2>The end</h2>
 
 
-<img data-src="images/clipboard-97370011.png" class="r-stretch"></section>
+<img data-src="images/clipboard-97370011.png" class="r-stretch quarto-figure-center"><p class="caption">https://allisonhorst.com/</p></section>
     </div>
   <div class="quarto-auto-generated-content" style="display: none;">
 <div class="footer footer-default">
