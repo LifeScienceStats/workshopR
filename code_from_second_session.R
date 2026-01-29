@@ -41,8 +41,8 @@ penguins_df$new_var <- 5:6
 penguins_df$new_var
 
 
-data1 <- readxl::read_excel("data/filename.xlsx", sheet=2, skip=1)
-data2 <- readxl::read_excel("data/filename.xlsx", sheet=3, skip=1)
+data1 <- readxl::read_excel("filename.xlsx", sheet=2, skip=1)
+data2 <- readxl::read_excel("filename.xlsx", sheet=3, skip=1)
 
 data_combined <- merge(data1, data2[c("SubjectId", "OF_MP_STATCD")], by="SubjectId")
 
