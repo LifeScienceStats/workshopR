@@ -159,10 +159,10 @@ Lidiya Mishieva
 <h2>Today …</h2>
 <ul>
 <li><p>Git architecture</p></li>
-<li><p>Basic commands</p></li>
 <li><p>Forking &amp; branching</p></li>
 <li><p>Merging</p></li>
 <li><p>Change history</p></li>
+<li><p>Basic commands</p></li>
 <li><p>Discussion about procedures</p></li>
 <li><p>Hands on &amp; exercises</p></li>
 </ul>
@@ -232,13 +232,19 @@ Lidiya Mishieva
 <section id="forking-and-branching" class="slide level2">
 <h2>Forking and branching</h2>
 <ul>
-<li><p><strong>Fork:</strong> a <strong>copy of someone else’s repository</strong> in your own GitHub account</p>
+<li class="fragment"><p><strong>Fork:</strong></p>
 <ul>
-<li>allows you to work independently without affecting the original project</li>
+<li class="fragment"><p>a <strong>copy of someone else’s repository</strong> in your own GitHub account</p>
+<ul>
+<li class="fragment">allows you to work independently without affecting the original project</li>
 </ul></li>
-<li><p><strong>Branch:</strong> a <strong>separate line of development</strong> within a repository</p>
+</ul></li>
+<li class="fragment"><p><strong>Branch:</strong></p>
 <ul>
-<li>allows to work on features or fixes without changing the main branch</li>
+<li class="fragment"><p>a <strong>separate line of development</strong> within a repository</p>
+<ul>
+<li class="fragment">allows to work on features or fixes without changing the main branch</li>
+</ul></li>
 </ul></li>
 </ul>
 </section>
@@ -246,6 +252,74 @@ Lidiya Mishieva
 <h2>Forking and branching</h2>
 
 <img data-src="images/clipboard-3091317810.png" class="quarto-figure quarto-figure-left r-stretch" width="634"></section>
+<section id="merging-and-merge-conflict" class="slide level2">
+<h2>Merging and merge conflict</h2>
+<ul>
+<li class="fragment"><strong>Merging:</strong>
+<ul>
+<li class="fragment">combines changes from one branch into another
+<ul>
+<li class="fragment">typically integrating a feature branch into main</li>
+<li class="fragment">but it could also be a fix within a branch</li>
+</ul></li>
+</ul></li>
+<li class="fragment"><strong>Merge conflict:</strong>
+<ul>
+<li class="fragment">Git cannot automatically combine changes because the same part of a file was edited differently in both branches</li>
+</ul></li>
+<li class="fragment"><strong>Resolving conflicts</strong>:
+<ul>
+<li class="fragment">manually editing the conflicting files, keeping the desired changes, then staging and committing the resolution</li>
+</ul></li>
+</ul>
+</section>
+<section id="merging-and-merge-conflict-1" class="slide level2">
+<h2>Merging and merge conflict</h2>
+
+<img data-src="images/clipboard-21952241.png" class="r-stretch"></section>
+<section id="change-history---log-reflog" class="slide level2">
+<h2>Change history - log &amp; reflog</h2>
+<ul>
+<li class="fragment"><p><code>git log</code>:</p>
+<ul>
+<li class="fragment">shows the <strong>history of commits</strong> in your repository</li>
+<li class="fragment">includes commit hashes, author, date, and commit messages</li>
+<li class="fragment">only shows commits that are reachable</li>
+</ul></li>
+<li class="fragment"><p><code>git reflog</code>:</p>
+<ul>
+<li class="fragment">shows the <strong>history of HEAD movements</strong></li>
+<li class="fragment">includes commits, branch checkouts, resets, merges, rebases, etc.</li>
+<li class="fragment">even includes commits that are “lost” or not visible in <code>git log</code> anymore</li>
+</ul></li>
+</ul>
+</section>
+<section id="detached-head" class="slide level2">
+<h2>Detached HEAD</h2>
+<div class="fragment">
+<div class="quarto-figure quarto-figure-left">
+<figure>
+<p><img data-src="images/clipboard-900321700.png" width="469"></p>
+<figcaption>https://wolfmcnally.com/162/git-what-is-a-detached-head/</figcaption>
+</figure>
+</div>
+</div>
+<div class="fragment">
+<ul>
+<li>a state that happens when a specific <em>commit</em> is checked out instead of a <em>branch</em> (you switch to the state of a commit) e.g.: <code>git checkout 1b18a33</code></li>
+</ul>
+</div>
+<div class="fragment">
+<ul>
+<li>if you do changes from this state, they will not belong to any branch and can get lost</li>
+</ul>
+</div>
+<div class="fragment">
+<ul>
+<li>instead, if you want to use it as a starting point, create a branch e.g.: <code>git checkout -b test-branch 1b18a33</code></li>
+</ul>
+</div>
+</section>
 <section id="basic-commands" class="slide level2">
 <h2>Basic commands</h2>
 <div class="fragment">
@@ -262,19 +336,19 @@ Lidiya Mishieva
 </thead>
 <tbody>
 <tr class="odd">
-<td>git clone <repository_url></repository_url></td>
+<td>git clone repository_URL</td>
 <td>create an initial local copy of a repository</td>
 </tr>
 <tr class="even">
-<td>git pull <remote_name< td="">
-</remote_name<></td><td>pull changes from a remote repository</td>
+<td>git pull <em>remote_name</em></td>
+<td>pull changes from a remote repository</td>
 </tr>
 <tr class="odd">
-<td>git fetch <remote_name></remote_name></td>
+<td>git fetch <em>remote_name</em></td>
 <td>fetch changes from a remote repository</td>
 </tr>
 <tr class="even">
-<td>git add <filename></filename></td>
+<td>git add <em>filename</em></td>
 <td>stage a specific file</td>
 </tr>
 <tr class="odd">
@@ -286,7 +360,7 @@ Lidiya Mishieva
 <td>commit and add a commit message</td>
 </tr>
 <tr class="odd">
-<td>git push <remote_name> <branch_name></branch_name></remote_name></td>
+<td>git push <em>remote_name</em> <em>branch_name</em></td>
 <td>pushes the changes to the remote repository</td>
 </tr>
 <tr class="even">
@@ -332,56 +406,41 @@ Lidiya Mishieva
 <td>reset the head to an older commit</td>
 </tr>
 <tr class="even">
-<td>git checkout -b <branch_name> HEAD@{2}</branch_name></td>
+<td>git checkout -b <em>branch_name</em> HEAD@{2}</td>
 <td>create a branch from a specific state of the head</td>
 </tr>
 <tr class="odd">
-<td>git checkout -b <branch_name> 1b18a33</branch_name></td>
+<td>git checkout -b <em>branch_name</em> 1b18a33</td>
 <td>create a branch from a specific commit</td>
 </tr>
 <tr class="even">
-<td>git checkout -b <branch_name></branch_name></td>
+<td>git checkout -b <em>branch_name</em></td>
 <td>create and switch to a new branch from where you currently are</td>
 </tr>
 <tr class="odd">
-<td>git checkout <branch_name></branch_name></td>
+<td>git checkout <em>branch_name</em></td>
 <td>switch to an existing branch</td>
 </tr>
 <tr class="even">
-<td>git merge <source_branch></source_branch></td>
+<td>git merge <em>source_branch</em></td>
 <td>merge changes from another branch (source branch)</td>
+</tr>
+<tr class="odd">
+<td>git branch -d <em>test-branch</em></td>
+<td>delete a specific branch</td>
 </tr>
 </tbody>
 </table>
 </section>
-<section id="forking-branching" class="slide level2">
-<h2>Forking &amp; branching</h2>
-</section>
-<section id="merge-conflict" class="slide level2">
-<h2>Merge conflict</h2>
-</section>
-<section id="change-history---log-reflog" class="slide level2">
-<h2>Change history - log &amp; reflog</h2>
-</section>
-<section id="change-history---log-reflog-1" class="slide level2">
-<h2>Change history - log &amp; reflog</h2>
-</section>
-<section id="change-history---log-reflog-2" class="slide level2">
-<h2>Change history - log &amp; reflog</h2>
-</section>
-<section id="detached-head" class="slide level2">
-<h2>Detached HEAD</h2>
-
-<img data-src="images/clipboard-900321700.png" width="469" class="r-stretch quarto-figure-left"><p class="caption">https://wolfmcnally.com/162/git-what-is-a-detached-head/</p></section>
 <section id="general-recommendations" class="slide level2">
 <h2>General recommendations</h2>
 <ul>
-<li><p>Always pull the current state of the repository before you start working (if others are working on it)</p></li>
-<li><p>Commit early and often, even after small tasks</p></li>
-<li><p>Write clear and meaningful commit messages</p></li>
-<li><p>Do not work directly on the <code>main</code> branch, always create a separate branch for development</p></li>
-<li><p>Merge only once your changes are complete and tested</p></li>
-<li><p>Push your changes frequently when working in a team</p></li>
+<li class="fragment"><p>Always pull the current state of the repository before you start working (if others are working on it)</p></li>
+<li class="fragment"><p>Commit early and often, even after small tasks</p></li>
+<li class="fragment"><p>Write clear and meaningful commit messages</p></li>
+<li class="fragment"><p>Do not work directly on the <code>main</code> branch, always create a separate branch for development</p></li>
+<li class="fragment"><p>Merge only once your changes are complete and tested</p></li>
+<li class="fragment"><p>Push your changes frequently when working in a team</p></li>
 </ul>
 </section>
 <section id="hands-on-discussion" class="slide level2">
