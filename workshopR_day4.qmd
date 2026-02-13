@@ -1,5 +1,5 @@
 ---
-title: "Introduction to R - Day 3"
+title: "Introduction to R - Day 4"
 author: "Lidiya Mishieva"
 date: today
 date-format: "DD MMMM, YYYY"
@@ -9,11 +9,81 @@ format:
     smaller: true
     scrollable: false
     chalkboard: true
-    footer: "Introduction to R - Day 3"
+    footer: "Introduction to R - Day 4"
     slide-number: true
     editor: visual
 ---
 
 ## Intro
 
-## Intro2
+## Git architecture
+
+![](images/clipboard-3240295348.png)
+
+## Git architecture
+
+![](images/clipboard-3826345041.png)
+
+## Git architecture
+
+![](images/clipboard-1698744149.png)
+
+## Git architecture
+
+![](images/clipboard-2740195371.png)
+
+## Git architecture
+
+![](images/clipboard-996425495.png)
+
+## Git architecture
+
+![](images/clipboard-3610806933.png)
+
+## Git architecture
+
+![](images/clipboard-2868200204.png)
+
+## Git architecture
+
+![](images/clipboard-28739665.png)
+
+## Git architecture
+
+![](images/clipboard-2081128607.png)
+
+## Git architecture
+
+![](images/clipboard-3834276077.png)
+
+## Git architecture
+
+![](images/clipboard-4143360904.png)
+
+## Git architecture
+
+![](images/clipboard-2778612830.png)
+
+## Git architecture
+
+![](images/clipboard-3805812573.png)
+
+## Git architecture
+
+![](images/clipboard-3256814595.png)
+
+## Git architecture
+
+![](images/clipboard-3295592137.png)
+
+## Basic commands
+
+| Col1 | Col2 | Col3 |
+|------|------|------|
+|      |      |      |
+|      |      |      |
+|      |      |      |
+|      |      |      |
+|      |      |      |
+
+## 
