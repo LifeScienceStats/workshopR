@@ -143,6 +143,29 @@ Lidiya Mishieva
 </section>
 <section id="intro" class="slide level2">
 <h2>Intro</h2>
+<ul>
+<li><p>Day 1: basic syntax, classes, objects, functions</p></li>
+<li><p>Day 2: base package, tidy programming &amp; tidyverse</p></li>
+<li><p>Day 3:</p>
+<ul>
+<li><p>Part 1: Summarizing data / tables</p></li>
+<li><p>Part 2: Reporting with RMarkdown / Quarto</p></li>
+</ul></li>
+<li><p><strong>Day 4: Git &amp; RStudio</strong></p></li>
+<li><p><em>Still missing: further operations on vectors. graphs, referencing in rmd/qmd, citations and bibliography</em></p></li>
+</ul>
+</section>
+<section id="today" class="slide level2">
+<h2>Today …</h2>
+<ul>
+<li><p>Git architecture</p></li>
+<li><p>Basic commands</p></li>
+<li><p>Forking &amp; branching</p></li>
+<li><p>Merging</p></li>
+<li><p>Change history</p></li>
+<li><p>Discussion about procedures</p></li>
+<li><p>Hands on &amp; exercises</p></li>
+</ul>
 </section>
 <section id="git-architecture" class="slide level2">
 <h2>Git architecture</h2>
@@ -206,46 +229,130 @@ Lidiya Mishieva
 <h2>Git architecture</h2>
 
 <img data-src="images/clipboard-3295592137.png" class="r-stretch"></section>
+<section id="forking-and-branching" class="slide level2">
+<h2>Forking and branching</h2>
+<ul>
+<li><p><strong>Fork:</strong> a <strong>copy of someone else’s repository</strong> in your own GitHub account</p>
+<ul>
+<li>allows you to work independently without affecting the original project</li>
+</ul></li>
+<li><p><strong>Branch:</strong> a <strong>separate line of development</strong> within a repository</p>
+<ul>
+<li>allows to work on features or fixes without changing the main branch</li>
+</ul></li>
+</ul>
+</section>
+<section id="forking-and-branching-1" class="slide level2">
+<h2>Forking and branching</h2>
+
+<img data-src="images/clipboard-3091317810.png" class="quarto-figure quarto-figure-left r-stretch" width="634"></section>
 <section id="basic-commands" class="slide level2">
 <h2>Basic commands</h2>
 <div class="fragment">
 <table class="caption-top">
+<colgroup>
+<col style="width: 40%">
+<col style="width: 59%">
+</colgroup>
 <thead>
 <tr class="header">
-<th>Col1</th>
-<th>Col2</th>
-<th>Col3</th>
+<th>Command</th>
+<th>Description</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td></td>
-<td></td>
-<td></td>
+<td>git clone <repository_url></repository_url></td>
+<td>create an initial local copy of a repository</td>
 </tr>
 <tr class="even">
-<td></td>
-<td></td>
-<td></td>
+<td>git pull <remote_name< td="">
+</remote_name<></td><td>pull changes from a remote repository</td>
 </tr>
 <tr class="odd">
-<td></td>
-<td></td>
-<td></td>
+<td>git fetch <remote_name></remote_name></td>
+<td>fetch changes from a remote repository</td>
 </tr>
 <tr class="even">
-<td></td>
-<td></td>
-<td></td>
+<td>git add <filename></filename></td>
+<td>stage a specific file</td>
 </tr>
 <tr class="odd">
-<td></td>
-<td></td>
-<td></td>
+<td>git add .</td>
+<td>stage all files</td>
+</tr>
+<tr class="even">
+<td>git commit -m “Initial commit”</td>
+<td>commit and add a commit message</td>
+</tr>
+<tr class="odd">
+<td>git push <remote_name> <branch_name></branch_name></remote_name></td>
+<td>pushes the changes to the remote repository</td>
+</tr>
+<tr class="even">
+<td>git status</td>
+<td>check the status of the files</td>
+</tr>
+<tr class="odd">
+<td>git log</td>
+<td>view commit history</td>
+</tr>
+<tr class="even">
+<td>git log –graph –oneline</td>
+<td>view the history tree (commits are shown in one line only)</td>
 </tr>
 </tbody>
 </table>
 </div>
+</section>
+<section id="basic-commands-1" class="slide level2">
+<h2>Basic commands</h2>
+<table class="caption-top">
+<colgroup>
+<col style="width: 40%">
+<col style="width: 59%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Command</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>git reflog</td>
+<td>view the log of the head</td>
+</tr>
+<tr class="even">
+<td>git checkout HEAD@{2}</td>
+<td>go to an older state of the head</td>
+</tr>
+<tr class="odd">
+<td>git reset –hard HEAD@{2}</td>
+<td>reset the head to an older commit</td>
+</tr>
+<tr class="even">
+<td>git checkout -b <branch_name> HEAD@{2}</branch_name></td>
+<td>create a branch from a specific state of the head</td>
+</tr>
+<tr class="odd">
+<td>git checkout -b <branch_name> 1b18a33</branch_name></td>
+<td>create a branch from a specific commit</td>
+</tr>
+<tr class="even">
+<td>git checkout -b <branch_name></branch_name></td>
+<td>create and switch to a new branch from where you currently are</td>
+</tr>
+<tr class="odd">
+<td>git checkout <branch_name></branch_name></td>
+<td>switch to an existing branch</td>
+</tr>
+<tr class="even">
+<td>git merge <source_branch></source_branch></td>
+<td>merge changes from another branch (source branch)</td>
+</tr>
+</tbody>
+</table>
 </section>
 <section id="forking-branching" class="slide level2">
 <h2>Forking &amp; branching</h2>
@@ -271,22 +378,10 @@ Lidiya Mishieva
 <ul>
 <li><p>Always pull the current state of the repository before you start working (if others are working on it)</p></li>
 <li><p>Commit early and often, even after small tasks</p></li>
-</ul>
-<!-- -->
-<ul>
-<li>Write clear and meaningful commit messages</li>
-</ul>
-<!-- -->
-<ul>
-<li>Do not work directly on the <code>main</code> branch, always create a separate branch for development</li>
-</ul>
-<!-- -->
-<ul>
-<li>Merge only once your changes are complete and tested</li>
-</ul>
-<!-- -->
-<ul>
-<li>Push your changes frequently when working in a team</li>
+<li><p>Write clear and meaningful commit messages</p></li>
+<li><p>Do not work directly on the <code>main</code> branch, always create a separate branch for development</p></li>
+<li><p>Merge only once your changes are complete and tested</p></li>
+<li><p>Push your changes frequently when working in a team</p></li>
 </ul>
 </section>
 <section id="hands-on-discussion" class="slide level2">
@@ -413,8 +508,12 @@ Lidiya Mishieva
 </ul></li>
 <li><p>Go through the exercise in the pdf-file, push all your changes to the forked repository &amp; create a pull request</p></li>
 </ul>
-
 </section>
+<section id="the-end" class="slide level2">
+<h2>The end</h2>
+
+
+<img data-src="images/clipboard-2250418702.png" width="701" class="r-stretch quarto-figure-left"><p class="caption">https://allisonhorst.com/git-github</p></section>
     </div>
   <div class="quarto-auto-generated-content" style="display: none;">
 <div class="footer footer-default">

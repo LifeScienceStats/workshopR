@@ -16,6 +16,36 @@ format:
 
 ## Intro
 
+-   Day 1: basic syntax, classes, objects, functions
+
+-   Day 2: base package, tidy programming & tidyverse
+
+-   Day 3:
+
+    -   Part 1: Summarizing data / tables
+
+    -   Part 2: Reporting with RMarkdown / Quarto
+
+-   **Day 4: Git & RStudio**
+
+-   *Still missing: further operations on vectors. graphs, referencing in rmd/qmd, citations and bibliography*
+
+## Today ...
+
+-   Git architecture
+
+-   Basic commands
+
+-   Forking & branching
+
+-   Merging
+
+-   Change history
+
+-   Discussion about procedures
+
+-   Hands on & exercises
+
 ## Git architecture
 
 . . .
@@ -78,34 +108,89 @@ format:
 
 ![](images/clipboard-3295592137.png)
 
-## Basic commands
+## Forking and branching
 
-. . .
+::: incremental
+-   **Fork:** a **copy of someone else’s repository** in your own GitHub account
 
-| Col1 | Col2 | Col3 |
-|------|------|------|
-|      |      |      |
-|      |      |      |
-|      |      |      |
-|      |      |      |
-|      |      |      |
+    -   allows you to work independently without affecting the original project
 
-## Forking & branching
+-   **Branch:** a **separate line of development** within a repository
 
-## Merge conflict
+    -   allows to work on features or fixes without changing the main branch
+:::
+
+## Forking and branching
+
+![](images/clipboard-3091317810.png){fig-align="left" width="634"}
+
+## Merging and merge conflict
+
+::: incremental
+-   **Merging:** combines changes from one branch into another
+-   typically integrating a feature branch into main
+-   but it could also be a fix within a branch
+-   **Merge conflict:** Git cannot automatically combine changes because the same part of a file was edited differently in both branches
+-   **Resolving conflicts**: manually editing the conflicting files, keeping the desired changes, then staging and committing the resolution
+:::
+
+## Merging and merge conflict
+
+![](images/clipboard-21952241.png)
 
 ## Change history - log & reflog
 
-## Change history - log & reflog
+::: incremental
+-   `git log`:
 
-## Change history - log & reflog
+    -   shows the **history of commits** in your repository
+    -   includes commit hashes, author, date, and commit messages
+    -   only shows commits that are reachable
+
+-   `git reflog`:
+
+    -   shows the **history of HEAD movements**
+    -   includes commits, branch checkouts, resets, merges, rebases, etc.
+    -   even includes commits that are “lost” or not visible in `git log` anymore
+:::
 
 ## Detached HEAD
 
 ![https://wolfmcnally.com/162/git-what-is-a-detached-head/](images/clipboard-900321700.png){fig-align="left" width="469"}
 
+## Basic commands
+
+. . .
+
+| Command | Description |
+|-----------------------------|-------------------------------------------|
+| git clone <repository_URL> | create an initial local copy of a repository |
+| git pull `<remote_name`{=html} | pull changes from a remote repository |
+| git fetch <remote_name> | fetch changes from a remote repository |
+| git add <filename> | stage a specific file |
+| git add . | stage all files |
+| git commit -m "Initial commit" | commit and add a commit message |
+| git push <remote_name> <branch_name> | pushes the changes to the remote repository |
+| git status | check the status of the files |
+| git log | view commit history |
+| git log --graph --oneline | view the history tree (commits are shown in one line only) |
+
+## Basic commands
+
+| Command | Description |
+|-----------------------------|-------------------------------------------|
+| git reflog | view the log of the head |
+| git checkout HEAD\@{2} | go to an older state of the head |
+| git reset --hard HEAD\@{2} | reset the head to an older commit |
+| git checkout -b <branch_name> HEAD\@{2} | create a branch from a specific state of the head |
+| git checkout -b <branch_name> 1b18a33 | create a branch from a specific commit |
+| git checkout -b <branch_name> | create and switch to a new branch from where you currently are |
+| git checkout <branch_name> | switch to an existing branch |
+| git merge <source_branch> | merge changes from another branch (source branch) |
+
 ## General recommendations
 
+::: incremental
 -   Always pull the current state of the repository before you start working (if others are working on it)
 
 -   Commit early and often, even after small tasks
@@ -117,6 +202,7 @@ format:
 -   Merge only once your changes are complete and tested
 
 -   Push your changes frequently when working in a team
+:::
 
 ## Hands on & discussion
 
