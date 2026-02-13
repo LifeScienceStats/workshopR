@@ -1,0 +1,17 @@
+---
+title: "Introduction to R - Day 3"
+author: "Lidiya Mishieva"
+date: today
+date-format: "DD MMMM, YYYY"
+format: 
+  revealjs:
+   # theme: dark
+    smaller: true
+    scrollable: false
+    chalkboard: true
+    footer: "Introduction to R - Day 3"
+    slide-number: true
+    editor: visual
+---
+
+## 
