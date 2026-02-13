@@ -184,7 +184,7 @@ format:
 . . .
 
 | Command | Description |
-|-----------------------------|-------------------------------------------|
+|----|----|
 | git clone repository_URL | create an initial local copy of a repository |
 | git pull *remote_name* | pull changes from a remote repository |
 | git fetch *remote_name* | fetch changes from a remote repository |
@@ -199,7 +199,7 @@ format:
 ## Basic commands
 
 | Command | Description |
-|-----------------------------|-------------------------------------------|
+|----|----|
 | git reflog | view the log of the head |
 | git checkout HEAD\@{2} | go to an older state of the head |
 | git reset --hard HEAD\@{2} | reset the head to an older commit |
