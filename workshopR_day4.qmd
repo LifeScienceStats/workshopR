@@ -18,6 +18,8 @@ format:
 
 ## Git architecture
 
+. . .
+
 ![](images/clipboard-3240295348.png)
 
 ## Git architecture
@@ -78,6 +80,8 @@ format:
 
 ## Basic commands
 
+. . .
+
 | Col1 | Col2 | Col3 |
 |------|------|------|
 |      |      |      |
@@ -86,4 +90,153 @@ format:
 |      |      |      |
 |      |      |      |
 
-## 
+## Forking & branching
+
+## Merge conflict
+
+## Change history - log & reflog
+
+## Change history - log & reflog
+
+## Change history - log & reflog
+
+## Detached HEAD
+
+![https://wolfmcnally.com/162/git-what-is-a-detached-head/](images/clipboard-900321700.png){fig-align="left" width="469"}
+
+## General recommendations
+
+-   Always pull the current state of the repository before you start working (if others are working on it)
+
+-   Commit early and often, even after small tasks
+
+<!-- -->
+
+-   Write clear and meaningful commit messages
+
+<!-- -->
+
+-   Do not work directly on the `main` branch, always create a separate branch for development
+
+<!-- -->
+
+-   Merge only once your changes are complete and tested
+
+<!-- -->
+
+-   Push your changes frequently when working in a team
+
+## Hands on & discussion
+
+## How should we work with Git?
+
+::: incremental
+-   There is 1 firm account responsible for creating and maintaining all the project repositories
+
+-   But everyone also has an account of their own
+
+-   Everyone forks the project repositories published by the firm accounts, and then:
+
+    -   works locally on the code, commits & pushes to the [**own**]{.underline} forked remote repositories
+    -   sends out [**pull requests**]{style="color:blue;"} to the [**main branch**]{style="color:blue;"} of the [**original**]{style="color:blue;"} repositories
+
+-   The person responsible for maintaining the firm account:
+
+    -   will review the pull requests & incorporate them into the original code (if present)
+    -   or just accept that the file is stored in the original repository
+    -   [**code releases**]{style="color:blue;"} a produced from the main firm account
+:::
+
+## Setting up Git
+
+::: incremental
+1.  Installing Git on your computer: <https://git-scm.com/install/>
+2.  Create a github account: <https://github.com/> -\> sign up
+3.  Go to your github account & create a new repo called `myfirstrepo`
+4.  Create a directory on your computer called `myfirstrepo`
+5.  Go to RStudio
+    -   Create a new Rproject
+    -   *File -\> New Project ... -\> Version Control -\> Git*
+        -   Add a repository URL
+        -   Choose the directory for your Rproject
+        -   Accept & RStudio will clone this repo for you!
+:::
+
+## Setting up Git (forking)
+
+::: incremental
+1.  Go to the URL of the repo you want to clone: [https://github.com/LifeScienceStats/workshopR](https://github.com/LifeScienceStats/workshopRex)
+2.  *Fork -\> Create a new fork -\> ( Optional: Copy the [main]{.underline} branch only ) -\> Create fork*
+    -   Now you have a copy of this repo on GitHub!
+3.  You can go back to the previous slide & go through the steps 4 & 5
+:::
+
+## Exercise 1 - pull request
+
+-   In your `workshopR` fork: find the file `.gitignore` and open it in RStudio.
+
+::: callout-note
+A **`.gitignore`** file tells **Git which files or folders it should ignore** (i.e., not track or commit). In other words: If something is listed in `.gitignore`, Git will pretend it doesn’t exist.
+:::
+
+-   Change the file such that you:
+
+    1.  Suggest more data formats in the section `#Data`
+
+    2.  Add a new section `#Docs` and suggest common document formats (e.g. .docx ...)
+
+-   Save, stage, commit & push the changes to your fork
+
+-   Create a pull request:
+
+    -   Go to the URL of your fork, in the top bar find the button `pull requests`, and go on from there (make sure you choose the correct branches).
+
+## Exercise 2 - merging
+
+-   Part 1: merging without a conflict
+
+    -   Go to your R project associated with `myfirstrepo`
+
+    -   Create a new branch called `exercise2part1`
+
+    -   Create a README.md file (if not already present), open it and add a line of text (a sentence is enough).
+
+    -   Save changes, stage, commit & push
+
+    -   Now, go back to the main branch & merge the two branches together
+
+    -   Check whether it has worked (hint: you can look up the log tree)
+
+    -   Commit & push
+
+## Exercise 2 - merging
+
+-   Part 2: solving a merge conflict
+
+    -   Create a new branch called `exercise2part2`
+
+    -   Add another sentence to your previously written one.
+
+    -   Save changes, stage, commit & push
+
+    -   Go back to the main branch & try to merge the branches.
+
+    -   Check whether it has worked. If not: resolve the conflict in a way you want your final text to look like.
+
+    -   Commit & push
+
+## Exercise 3 - code development with version control
+
+-   By now, you should have forked the repository `workshopRex`, now pull the current version of it
+
+-   You will be able to find a pdf-file with some guidance on what you are expected to write your code for (the data will be provided via the internal cloud)
+
+-   But before you jump in:
+
+    -   Create a sub-directory `your-name-ex3` with a meaningful internal structure (e.g. subfolders for data, scripts, output ...)
+
+    -   Think about how to set up the .gitignore file, so nothing is shared on github that is strictly internal
+
+    -   Remember to work with branches & frequent commits
+
+-   Go through the exercise in the pdf-file, push all your changes to the forked repository & create a pull request

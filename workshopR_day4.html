@@ -146,8 +146,10 @@ Lidiya Mishieva
 </section>
 <section id="git-architecture" class="slide level2">
 <h2>Git architecture</h2>
-
-<img data-src="images/clipboard-3240295348.png" class="r-stretch"></section>
+<div class="fragment">
+<p><img data-src="images/clipboard-3240295348.png"></p>
+</div>
+</section>
 <section id="git-architecture-1" class="slide level2">
 <h2>Git architecture</h2>
 
@@ -206,6 +208,7 @@ Lidiya Mishieva
 <img data-src="images/clipboard-3295592137.png" class="r-stretch"></section>
 <section id="basic-commands" class="slide level2">
 <h2>Basic commands</h2>
+<div class="fragment">
 <table class="caption-top">
 <thead>
 <tr class="header">
@@ -242,9 +245,174 @@ Lidiya Mishieva
 </tr>
 </tbody>
 </table>
+</div>
 </section>
-<section id="section" class="slide level2">
-<h2></h2>
+<section id="forking-branching" class="slide level2">
+<h2>Forking &amp; branching</h2>
+</section>
+<section id="merge-conflict" class="slide level2">
+<h2>Merge conflict</h2>
+</section>
+<section id="change-history---log-reflog" class="slide level2">
+<h2>Change history - log &amp; reflog</h2>
+</section>
+<section id="change-history---log-reflog-1" class="slide level2">
+<h2>Change history - log &amp; reflog</h2>
+</section>
+<section id="change-history---log-reflog-2" class="slide level2">
+<h2>Change history - log &amp; reflog</h2>
+</section>
+<section id="detached-head" class="slide level2">
+<h2>Detached HEAD</h2>
+
+<img data-src="images/clipboard-900321700.png" width="469" class="r-stretch quarto-figure-left"><p class="caption">https://wolfmcnally.com/162/git-what-is-a-detached-head/</p></section>
+<section id="general-recommendations" class="slide level2">
+<h2>General recommendations</h2>
+<ul>
+<li><p>Always pull the current state of the repository before you start working (if others are working on it)</p></li>
+<li><p>Commit early and often, even after small tasks</p></li>
+</ul>
+<!-- -->
+<ul>
+<li>Write clear and meaningful commit messages</li>
+</ul>
+<!-- -->
+<ul>
+<li>Do not work directly on the <code>main</code> branch, always create a separate branch for development</li>
+</ul>
+<!-- -->
+<ul>
+<li>Merge only once your changes are complete and tested</li>
+</ul>
+<!-- -->
+<ul>
+<li>Push your changes frequently when working in a team</li>
+</ul>
+</section>
+<section id="hands-on-discussion" class="slide level2">
+<h2>Hands on &amp; discussion</h2>
+</section>
+<section id="how-should-we-work-with-git" class="slide level2">
+<h2>How should we work with Git?</h2>
+<ul>
+<li class="fragment"><p>There is 1 firm account responsible for creating and maintaining all the project repositories</p></li>
+<li class="fragment"><p>But everyone also has an account of their own</p></li>
+<li class="fragment"><p>Everyone forks the project repositories published by the firm accounts, and then:</p>
+<ul>
+<li class="fragment">works locally on the code, commits &amp; pushes to the <u><strong>own</strong></u> forked remote repositories</li>
+<li class="fragment">sends out <span style="color:blue;"><strong>pull requests</strong></span> to the <span style="color:blue;"><strong>main branch</strong></span> of the <span style="color:blue;"><strong>original</strong></span> repositories</li>
+</ul></li>
+<li class="fragment"><p>The person responsible for maintaining the firm account:</p>
+<ul>
+<li class="fragment">will review the pull requests &amp; incorporate them into the original code (if present)</li>
+<li class="fragment">or just accept that the file is stored in the original repository</li>
+<li class="fragment"><span style="color:blue;"><strong>code releases</strong></span> a produced from the main firm account</li>
+</ul></li>
+</ul>
+</section>
+<section id="setting-up-git" class="slide level2">
+<h2>Setting up Git</h2>
+<ol type="1">
+<li class="fragment">Installing Git on your computer: <a href="https://git-scm.com/install/" class="uri">https://git-scm.com/install/</a></li>
+<li class="fragment">Create a github account: <a href="https://github.com/" class="uri">https://github.com/</a> -&gt; sign up</li>
+<li class="fragment">Go to your github account &amp; create a new repo called <code>myfirstrepo</code></li>
+<li class="fragment">Create a directory on your computer called <code>myfirstrepo</code></li>
+<li class="fragment">Go to RStudio
+<ul>
+<li class="fragment">Create a new Rproject</li>
+<li class="fragment"><em>File -&gt; New Project … -&gt; Version Control -&gt; Git</em>
+<ul>
+<li class="fragment">Add a repository URL</li>
+<li class="fragment">Choose the directory for your Rproject</li>
+<li class="fragment">Accept &amp; RStudio will clone this repo for you!</li>
+</ul></li>
+</ul></li>
+</ol>
+</section>
+<section id="setting-up-git-forking" class="slide level2">
+<h2>Setting up Git (forking)</h2>
+<ol type="1">
+<li class="fragment">Go to the URL of the repo you want to clone: <a href="https://github.com/LifeScienceStats/workshopRex">https://github.com/LifeScienceStats/workshopR</a></li>
+<li class="fragment"><em>Fork -&gt; Create a new fork -&gt; ( Optional: Copy the <u>main</u> branch only ) -&gt; Create fork</em>
+<ul>
+<li class="fragment">Now you have a copy of this repo on GitHub!</li>
+</ul></li>
+<li class="fragment">You can go back to the previous slide &amp; go through the steps 4 &amp; 5</li>
+</ol>
+</section>
+<section id="exercise-1---pull-request" class="slide level2">
+<h2>Exercise 1 - pull request</h2>
+<ul>
+<li>In your <code>workshopR</code> fork: find the file <code>.gitignore</code> and open it in RStudio.</li>
+</ul>
+<div class="callout callout-note callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Note</strong></p>
+</div>
+<div class="callout-content">
+<p>A <strong><code>.gitignore</code></strong> file tells <strong>Git which files or folders it should ignore</strong> (i.e., not track or commit). In other words: If something is listed in <code>.gitignore</code>, Git will pretend it doesn’t exist.</p>
+</div>
+</div>
+</div>
+<ul>
+<li><p>Change the file such that you:</p>
+<ol type="1">
+<li><p>Suggest more data formats in the section <code>#Data</code></p></li>
+<li><p>Add a new section <code>#Docs</code> and suggest common document formats (e.g.&nbsp;.docx …)</p></li>
+</ol></li>
+<li><p>Save, stage, commit &amp; push the changes to your fork</p></li>
+<li><p>Create a pull request:</p>
+<ul>
+<li>Go to the URL of your fork, in the top bar find the button <code>pull requests</code>, and go on from there (make sure you choose the correct branches).</li>
+</ul></li>
+</ul>
+</section>
+<section id="exercise-2---merging" class="slide level2">
+<h2>Exercise 2 - merging</h2>
+<ul>
+<li><p>Part 1: merging without a conflict</p>
+<ul>
+<li><p>Go to your R project associated with <code>myfirstrepo</code></p></li>
+<li><p>Create a new branch called <code>exercise2part1</code></p></li>
+<li><p>Create a README.md file (if not already present), open it and add a line of text (a sentence is enough).</p></li>
+<li><p>Save changes, stage, commit &amp; push</p></li>
+<li><p>Now, go back to the main branch &amp; merge the two branches together</p></li>
+<li><p>Check whether it has worked (hint: you can look up the log tree)</p></li>
+<li><p>Commit &amp; push</p></li>
+</ul></li>
+</ul>
+</section>
+<section id="exercise-2---merging-1" class="slide level2">
+<h2>Exercise 2 - merging</h2>
+<ul>
+<li><p>Part 2: solving a merge conflict</p>
+<ul>
+<li><p>Create a new branch called <code>exercise2part2</code></p></li>
+<li><p>Add another sentence to your previously written one.</p></li>
+<li><p>Save changes, stage, commit &amp; push</p></li>
+<li><p>Go back to the main branch &amp; try to merge the branches.</p></li>
+<li><p>Check whether it has worked. If not: resolve the conflict in a way you want your final text to look like.</p></li>
+<li><p>Commit &amp; push</p></li>
+</ul></li>
+</ul>
+</section>
+<section id="exercise-3---code-development-with-version-control" class="slide level2">
+<h2>Exercise 3 - code development with version control</h2>
+<ul>
+<li><p>By now, you should have forked the repository <code>workshopRex</code>, now pull the current version of it</p></li>
+<li><p>You will be able to find a pdf-file with some guidance on what you are expected to write your code for (the data will be provided via the internal cloud)</p></li>
+<li><p>But before you jump in:</p>
+<ul>
+<li><p>Create a sub-directory <code>your-name-ex3</code> with a meaningful internal structure (e.g.&nbsp;subfolders for data, scripts, output …)</p></li>
+<li><p>Think about how to set up the .gitignore file, so nothing is shared on github that is strictly internal</p></li>
+<li><p>Remember to work with branches &amp; frequent commits</p></li>
+</ul></li>
+<li><p>Go through the exercise in the pdf-file, push all your changes to the forked repository &amp; create a pull request</p></li>
+</ul>
 
 </section>
     </div>
