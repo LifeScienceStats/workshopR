@@ -110,19 +110,11 @@ format:
 
 -   Commit early and often, even after small tasks
 
-<!-- -->
-
 -   Write clear and meaningful commit messages
-
-<!-- -->
 
 -   Do not work directly on the `main` branch, always create a separate branch for development
 
-<!-- -->
-
 -   Merge only once your changes are complete and tested
-
-<!-- -->
 
 -   Push your changes frequently when working in a team
 
@@ -240,3 +232,7 @@ A **`.gitignore`** file tells **Git which files or folders it should ignore** (i
     -   Remember to work with branches & frequent commits
 
 -   Go through the exercise in the pdf-file, push all your changes to the forked repository & create a pull request
+
+## The end
+
+![https://allisonhorst.com/git-github](images/clipboard-2250418702.png){fig-align="left" width="701"}
