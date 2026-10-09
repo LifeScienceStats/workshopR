@@ -1,0 +1,200 @@
+---
+title: "Git Refresher"
+author: "Lidiya Mishieva"
+date: today
+date-format: "DD MMMM, YYYY"
+format: 
+  revealjs:
+   # theme: dark
+    smaller: true
+    scrollable: false
+    chalkboard: true
+    footer: "Git Refresher"
+    slide-number: true
+    editor: visual
+---
+
+## Intro
+
+1.  What is git?
+
+2.  How does git work?
+
+3.  Collaboration strategy
+
+4.  New SOP
+
+    <!--# TN-III and TIGR-Matrix als nächste Projekte? -->
+
+## 1. What is git?
+
+-   Git $\neq$ GitHub
+
+-   Git is a version control system (software)
+
+-   Github is an online repository hosting platform (server)
+
+## 2. How does git work?
+
+## 2.1 Git data model
+
+## 2.1 Git data model
+
+<!--# Git models the history o a collection of files and folders within some top-level directory as a series of snapshots. In Git terminology, a file is called a “blob”, and it’s just a bunch of bytes. A directory is called a “tree”, and it maps names to blobs or trees (so directories can contain other directories). A snapshot is the top-level tree that is being tracked. For example, we might have a tree as follows: -->
+
+![](images/clipboard-2586913131.jpeg)
+
+## 2.1 Git data model
+
+<!--# In this example, there are three blob objects: main.py, base_lib.py, and core_lib.py files; three tree objects: ., lib, and base folders; and one commit object corresponding to the initial commit. There are also two references: branch and HEAD. The branch points to our last commit and HEAD points to the branch we are currently on³. This lets Git know which commit will be the parent of the next commit. So, every branch is in fact a pointer to a certain commit, and HEAD refers to the latest part of the branch that we are on. -->
+
+![](images/clipboard-3503029424.jpeg)
+
+## 2.1 Git data model
+
+![](images/clipboard-2324758412.jpeg)
+
+## 2.2 Committing and branching
+
+![](images/clipboard-321388596.jpeg)
+
+## 2.2 Committing and branching
+
+![](images/clipboard-3509658700.jpeg)
+
+## 2.2 Committing and branching
+
+![](images/clipboard-1129979198.jpeg)
+
+## 2.2 Committing and branching
+
+![](images/clipboard-321388596.jpeg)
+
+## 2.2 Committing and branching
+
+![](images/clipboard-609141285.jpeg)
+
+## 2.2 Committing and branching
+
+![](images/clipboard-118345289.jpeg)
+
+## 2.2 Committing and branching
+
+![](images/clipboard-1885599509.jpeg)
+
+## 2.2 Committing and branching
+
+![](images/clipboard-1455275497.jpeg)
+
+## 2.2 Committing and branching
+
+![](images/clipboard-4271220197.jpeg)
+
+## Better safe than sorry!
+
+![](images/clipboard-3701161853.png)
+
+## 2.3 Detached head and commit
+
+![](images/clipboard-4057485256.jpeg)
+
+## 2.3 Detached head and commit
+
+![](images/clipboard-2049169869.jpeg)
+
+## 2.3 Detached head and commit
+
+![](images/clipboard-2516148191.jpeg)
+
+## 2.3 Detached head and commit
+
+![](images/clipboard-736477472.jpeg)
+
+## 2.3 Detached head and commit
+
+![](images/clipboard-4172911903.jpeg)
+
+## 2.3 Detached head and commit
+
+![](images/clipboard-1600893967.jpeg)
+
+## 2.4 Merging and merge conflict
+
+::: incremental
+-   **Merging:**
+    -   combines changes from one branch into another
+        -   typically integrating a feature branch into main
+        -   but it could also be a fix within a branch
+-   **Merge conflict:**
+    -   Git cannot automatically combine changes because the same part of a file was edited differently in both branches
+-   **Resolving conflicts**:
+    -   manually editing the conflicting files, keeping the desired changes, then staging and committing the resolution
+:::
+
+## 2.4 Merging and merge conflict
+
+![](images/clipboard-21952241.png)
+
+## 2.5 Locations
+
+![](images/clipboard-3240295348.png)
+
+## 2.5 Locations
+
+![](images/clipboard-996425495.png)
+
+## 2.6 Git commands
+
+![](images/clipboard-3805812573.png)
+
+## 3 Collaboration strategy
+
+![](images/clipboard-1338988483.jpeg)
+
+## 3 Collaboration strategy
+
+![](images/clipboard-1544126336.jpeg)
+
+## 3 Collaboration strategy
+
+![](images/clipboard-1374185273.jpeg)
+
+## 3 Collaboration strategy
+
+![](images/clipboard-3610849694.png)
+
+## 4 New SOP
+
+## 4.1 Roles and responsibilities
+
+-   **Repository Manager**
+
+    -   creates and configures repositories
+
+    -   manages access & permissions
+
+    -   ensures that the main represents the current approved version
+
+-   **Contributor**
+
+    -   develops changes, submitting for review via pull request
+
+    -   addresses review comments, resolves merge conflicts affecting their branch
+
+    -   maintains local repository
+
+-   **Reviewer**
+
+    -   reveiw of submitted code (proposed change is correct and appropriate)
+
+    -   requests changes or clarification where required, and
+
+    -   approves the pull request
+
+## 4.2 Procedures
+
+![](images/clipboard-176338898.png)
+
+## Thank you for you attention!
+
+![](images/clipboard-2086758073.png)
