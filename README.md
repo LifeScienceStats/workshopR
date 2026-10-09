@@ -10,3 +10,6 @@ The workshop was structured as follows:
 * Day 2: Base & tidyverse for data analyses
 * Day 3: Graphs, tables and reporting with RMarkdown / Quarto
 * Day 4: Git & RStudio
+
+At a later date, we also organized a Git Refresher course.
+The files for this course can also be found in this repository.
